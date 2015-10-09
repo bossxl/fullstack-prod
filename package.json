@@ -1,0 +1,26 @@
+{
+  "name": "fullstack-prod",
+  "version": "0.1.0",
+  "description": "A test project",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.1.9",
+    "morgan": "^1.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bossxl/fullstack-prod.git"
+  },
+  "author": "Paul Boss and others",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bossxl/fullstack-prod/issues"
+  },
+  "homepage": "https://github.com/bossxl/fullstack-prod#readme"
+}
