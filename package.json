@@ -1,6 +1,6 @@
 {
   "name": "fullstack-prod",
-  "version": "0.1.0",
+  "version": "0.2.2",
   "description": "A test project",
   "main": "index.js",
   "dependencies": {
@@ -9,7 +9,13 @@
     "mongoose": "^4.1.9",
     "morgan": "^1.6.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-bump": "^1.0.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-nsp": "^0.4.5"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
