@@ -9,7 +9,7 @@ gulp.task('nsp', function (cb) {
   gulpNSP('./package.json', cb);
 });
 
-gulp.task('lint', function () {
+gulp.task('lint', function () {xs
   gulp.src('./index.js')
     .pipe(jshint())
 });
@@ -38,4 +38,4 @@ gulp.task('develop', function () {
     .on('restart', function () {
       console.log('restarted!')
     })
-})
+});
