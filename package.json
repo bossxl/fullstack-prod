@@ -1,6 +1,6 @@
 {
   "name": "fullstack-prod",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "A test project",
   "main": "index.js",
   "dependencies": {
@@ -14,7 +14,8 @@
     "gulp-bump": "^1.0.0",
     "gulp-jshint": "^1.11.2",
     "gulp-nodemon": "^2.0.4",
-    "gulp-nsp": "^0.4.5"
+    "gulp-nsp": "^0.4.5",
+    "gulp-shrinkwrap": "^2.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

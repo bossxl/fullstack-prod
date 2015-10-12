@@ -5,7 +5,7 @@ var jshint = require('gulp-jshint');
 var bump = require('gulp-bump');
 var shrinkwrap = require('gulp-shrinkwrap');
 
-gulp.task('nsp', function (cb) {
+gulp.task('nsp', ['shrinkwrap'],function (cb) {
   gulpNSP('./package.json', cb);
 });
 
@@ -14,7 +14,13 @@ gulp.task('lint', function () {xs
     .pipe(jshint())
 });
 
-gulp.task('bump-prod', function(){
+gulp.task('shrinkwrap', function () {
+  return gulp.src('package.json')
+    .pipe(shrinkwrap())      // just like running `npm shrinkwrap`
+    .pipe(gulp.dest('./'));  // writes newly created `npm-shrinkwrap.json` to the location of your choice
+});
+
+gulp.task('bump-prod', ['nsp'], function(){
   gulp.src('./package.json')
   .pipe(bump({type:'minor'}))
   .pipe(gulp.dest('./'));
@@ -29,7 +35,7 @@ gulp.task('default', function() {
   // place code for your default task here
 });
 
-gulp.task('production', ['nsp','bump-prod']);
+gulp.task('production', ['shrinkwrap', 'nsp', 'bump-prod']);
 
 gulp.task('develop', function () {
   nodemon({ script: 'index.js'
